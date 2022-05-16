@@ -182,7 +182,7 @@ body.menu-expanded .close-menu {
 }
 
 .user {
-  margin-top: 8rem;
+  margin-top: 4rem;
 
   display: flex;
   align-items: center;
@@ -521,14 +521,40 @@ footer p {
     transition: 300ms;
   }
 
-  nav#navigation .menu ul a:hover {
+  nav#navigation .menu ul a:hover,
+  nav#navigation .menu ul a.active {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--gray);
   }
 
-  nav#navigation.scroll .menu ul a:hover {
+  nav#navigation.scroll .menu ul a:hover,
+  nav#navigation.scroll .menu ul a.active {
     color: white;
+  }
+
+  nav#navigation .menu ul a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: black;
+
+    display: block;
+
+    position: relative;
+    top: 2.4rem;
+    left: -0.8rem;
+
+    transition: 300ms;
+  }
+
+  nav#navigation .menu ul a.active::after {
+    width: 100%;
+    padding-inline: 0.8rem;
+  }
+
+  nav#navigation.scroll .menu ul a.active::after {
+    background-color: white;
   }
 
   nav#navigation .menu .user {
