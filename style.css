@@ -43,6 +43,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   text-align: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
