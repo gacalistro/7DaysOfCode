@@ -10,18 +10,22 @@ function onScroll() {
 }
 
 function showNavOnScroll() {
+  const nav = document.querySelector("#navigation");
+
   if (scrollY > 0) {
-    navigation.classList.add("scroll");
+    nav.classList.add("scroll");
   } else {
-    navigation.classList.remove("scroll");
+    nav.classList.remove("scroll");
   }
 }
 
 function backToTopButtonShow() {
+  const backToTopBtn = document.querySelector("#backToTopButton");
+
   if (scrollY > 450) {
-    backToTopButton.classList.add("show");
+    backToTopBtn.classList.add("show");
   } else {
-    backToTopButton.classList.remove("show");
+    backToTopBtn.classList.remove("show");
   }
 }
 
